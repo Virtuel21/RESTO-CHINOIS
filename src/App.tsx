@@ -7,6 +7,8 @@ import TakeawayPage from './pages/TakeawayPage'
 import ReservationPage from './pages/ReservationPage'
 import PracticalInfoPage from './pages/PracticalInfoPage'
 import AdminPage from './pages/AdminPage'
+import BlogPage from './pages/BlogPage'
+import BlogArticlePage from './pages/BlogArticlePage'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/reservation" element={<ReservationPage />} />
           <Route path="/info" element={<PracticalInfoPage />} />
           <Route path="/admin" element={<AdminPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/plats-chinois" element={<BlogArticlePage />} />
           <Route path="/legal" element={<LegalPage />} />
         </Routes>
       </Layout>
@@ -80,3 +84,4 @@ function LegalPage() {
 }
 
 export default App
+

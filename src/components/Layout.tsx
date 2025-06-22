@@ -16,6 +16,7 @@ export default function Layout({ children }: LayoutProps) {
     { name: 'Menu', href: '/menu' },
     { name: 'Commande', href: '/takeaway' },
     { name: 'Réservation', href: '/reservation' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Infos', href: '/info' },
   ]
 
@@ -173,3 +174,4 @@ export default function Layout({ children }: LayoutProps) {
     </div>
   )
 }
+
