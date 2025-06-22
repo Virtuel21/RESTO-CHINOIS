@@ -4,7 +4,7 @@ import { LogIn, LogOut, Plus, Edit, Trash2, Calendar, ShoppingBag } from 'lucide
 import { supabase, MenuItem, Reservation } from '../lib/supabase'
 
 export default function AdminPage() {
-  const [user, setUser] = useState<any>(null)
+  const [user, setUser] = useState<unknown>(null)
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState<'menu' | 'reservations'>('menu')
 
@@ -108,8 +108,9 @@ function AdminLogin() {
       })
 
       if (error) throw error
-    } catch (error: any) {
-      alert(error.message)
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error)
+      alert(message)
     } finally {
       setIsLoading(false)
     }
